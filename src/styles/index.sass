@@ -7,3 +7,44 @@
 
 html
     font-family: $font-family
+    color: $black
+
+.header
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: $size-L
+
+.heading
+    @include heading
+    text-shadow: $shadow
+    margin-top: $size-M
+
+.subheader
+    @include standard-text
+    margin-top: $size-S
+    max-width: 600px
+    text-align: center
+
+.subheading
+    @include subheading
+    text-align: center
+    text-shadow: $shadow
+
+.icons
+    display: flex
+    justify-content: space-evenly
+    margin-top: $size-M
+    margin-bottom: $size-L
+
+.title
+    @include module-name
+
+.icon
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+
+.vector
+    margin-bottom: $size-S

@@ -4,19 +4,34 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Modules from "./components/Modules"
 
-// make sure the app is navigable with keyboard
-// pass text as a prop to components 
+// place the wave background in the Modules component
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header
+        heading={"Isola.js"}
+        subheader={"A web development oriented multi purpose JavaScript library"}
+      />
       <main>
-        <Modules />
-        <Author />
-        <Buttons />
+        <Modules
+          subheading={"What can Isola.js do?"}
+        />
+        <Author
+          subheading={"Who created Isola.js?"}
+          paragraphs={[
+            "My name is Szymon, I am a 19-year-old frontend developer specializing in React.js and Figma.",
+            "I am also a co-founder of HOMIES, an edu-tech startup."
+          ]}
+        />
+        <Buttons
+          pkg={"Download package"}
+          documentation={"Read documentation"}
+        />
       </main>
-      <Footer />
+      <Footer
+        text={"Szymon Hyziak © 2022-2023 - Isola.js - A web development oriented multi purpose JavaScript library"}
+      />
     </div>
   )
 }

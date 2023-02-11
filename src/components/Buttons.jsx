@@ -1,8 +1,10 @@
-export default function Buttons() {
+export default function Buttons(props) {
+  const { pkg, documentation } = props;
+
   return (
-    <section className="buttons">
-      <button className="package">Use Isola.js in your project</button>
-      <button className="documentation">Read documentation</button>
-    </section>
+    <article className="buttons">
+      <button className="package">{pkg}</button>
+      <button className="documentation">{documentation}</button>
+    </article>
   )
 }

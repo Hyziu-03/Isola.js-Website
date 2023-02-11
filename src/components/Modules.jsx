@@ -2,24 +2,26 @@ import Jokes from "../icons/Jokes";
 import Navigator from "../icons/Navigator";
 import Tools from "../icons/Tools";
 
-export default function Modules() {
+export default function Modules(props) {
+    const { subheading } = props;
+
     return (
-        <section className="modules">
-            <h2 className="subheading">What can you find in Isola.js?</h2>
-            <section className="icons">
-                <div className="navigator">
-                    <span className="title">Navigator</span>
+        <>
+            <h2 className="subheading" tabIndex={0}>{subheading}</h2>
+            <article className="icons">
+                <section className="icon" tabIndex={0}>
                     <Navigator />
-                </div>
-                <div className="tools">
-                    <span className="title">Tools</span>
+                    <span className="title">Navigator</span>
+                </section>
+                <section className="icon" tabIndex={0}>
                     <Tools />
-                </div>
-                <div className="jokes">
-                    <span className="title">Jokes</span>
+                    <span className="title">Tools</span>
+                </section>
+                <section className="icon" tabIndex={0}>
                     <Jokes />
-                </div>
-            </section>
-        </section>
+                    <span className="title">Jokes</span>
+                </section>
+            </article>
+        </>
     )
 }

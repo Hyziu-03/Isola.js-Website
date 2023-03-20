@@ -89,4 +89,28 @@ html {
 
 .vector {
 	margin-bottom: 16px;
+}
+
+.explanation {
+	display: flex;
+	align-items: center;
+	margin-top: 48px;
+	margin-bottom: 88px;
+	justify-content: center;
+}
+.explanation .text {
+	font-size: 32px;
+	line-height: 48px;
+	text-align: center;
+	max-width: 600px;
+	margin: 0 48px;
+}
+
+.photo {
+	min-width: 384px;
+	min-height: 384px;
+	background-image: url(../../public/szymon-hyziak.jpg);
+	background-size: cover;
+	background-position: center;
+	border-radius: 45%;
 } /*# sourceMappingURL=index.css.map */

@@ -48,3 +48,24 @@ html
 
 .vector
     margin-bottom: $size-S
+
+.explanation
+    display: flex
+    align-items: center
+    margin-top: $size-M
+    margin-bottom: $size-L
+    justify-content: center
+
+    .text
+        @include standard-text
+        text-align: center
+        max-width: 600px
+        margin: 0 $size-M
+
+.photo
+    min-width: $dimension
+    min-height: $dimension
+    background-image: url(../../public/szymon-hyziak.jpg)
+    background-size: cover
+    background-position: center
+    border-radius: 45%

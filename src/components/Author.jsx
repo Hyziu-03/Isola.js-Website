@@ -5,9 +5,11 @@ export default function Author(props) {
         <article className="author">
             <h2 className="subheading" tabIndex={0}>{subheading}</h2>
             <section className="explanation">
-                <img src="" alt="" />
-                <p className="text">{paragraphs[0]}</p>
-                <p className="text">{paragraphs[1]}</p>
+                <img src="" className="photo" alt="" />
+                <section className="text">
+                    <p>{paragraphs[0]}</p>
+                    <p>{paragraphs[1]}</p>
+                </section>
             </section>
         </article>
     )

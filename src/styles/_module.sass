@@ -41,7 +41,7 @@ $yellow: #EDFF21
 $shadow: 8px 8px 0 $transparent-black
 
 // Photo style
-$dimension: 384px
+$dimension: 292px
 
 // Text styles
 
@@ -49,24 +49,39 @@ $dimension: 384px
     font-size: 96px
     line-height: 96px
 
+    @media(max-width: 768px)
+        font-size: 64px
+        line-height: 64px
+
 @mixin standard-text
     font-size: 32px
     line-height: 48px
+
+    @media(max-width: 768px)
+        font-size: 20px
+        line-height: 32px
 
 @mixin subheading
     font-size: 64px
     line-height: 64px
 
+    @media(max-width: 768px)
+        font-size: 40px
+        line-height: 48px
+
 @mixin module-name
     font-size: 40px
     line-height: 40px
+
+    @media(max-width: 768px)
+        font-size: 32px
+        line-height: 48px
 
 @mixin footer-text
     font-size: 24px
     line-height: 24px
     font-weight: 400
 
-@mixin hovered-button-text
-    font-weight: 700
-    font-size: 32px
-    line-height: 48px
+    @media(max-width: 768px)
+        font-size: 16px
+        line-height: 24px

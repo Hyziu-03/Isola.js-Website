@@ -13,7 +13,7 @@ html
     display: flex
     flex-direction: column
     align-items: center
-    margin-bottom: $size-L
+    margin-bottom: $size-M
 
 .heading
     @include heading
@@ -22,20 +22,29 @@ html
 
 .subheader
     @include standard-text
-    margin-top: $size-S
     max-width: 600px
     text-align: center
+    margin: $size-S $size-S 0 $size-S
 
 .subheading
     @include subheading
     text-align: center
     text-shadow: $shadow
+    margin: 0 $size-S 0 $size-S
+
+.modules
+    margin-bottom: $size-L
+    background-color: $pink
+    padding: $size-M
+    border-radius: 22.5%
 
 .icons
     display: flex
     justify-content: space-evenly
     margin-top: $size-M
-    margin-bottom: $size-L
+
+    @media(max-width: 550px)
+        flex-direction: column
 
 .title
     @include module-name
@@ -45,6 +54,10 @@ html
     flex-direction: column
     align-items: center
     justify-content: space-around
+    margin: 0 $size-S 0 $size-S
+
+    @media(max-width: 425px)
+        margin: $size-S 0
 
 .vector
     margin-bottom: $size-S
@@ -52,9 +65,11 @@ html
 .explanation
     display: flex
     align-items: center
-    margin-top: $size-M
-    margin-bottom: $size-L
+    margin: $size-M 0 $size-M 0
     justify-content: center
+
+    @media(max-width: 1024px)
+        flex-direction: column
 
     .text
         @include standard-text
@@ -62,10 +77,62 @@ html
         max-width: 600px
         margin: 0 $size-M
 
+        @media (max-width: 1024px)
+            margin-top: $size-M
+
 .photo
     min-width: $dimension
     min-height: $dimension
-    background-image: url(../../public/szymon-hyziak.jpg)
+    background-image: url(../../szymon-hyziak.jpg)
     background-size: cover
     background-position: center
     border-radius: 45%
+
+.buttons
+    display: flex
+    justify-content: space-evenly
+    margin-bottom: $size-M
+
+    @media(max-width: 1024px)
+        flex-direction: column
+
+.package, .documentation
+    @include standard-text
+    box-shadow: $shadow
+    padding: $size-S $size-L
+    border-radius: $size-L
+    border: 4px solid transparent
+    transition: all 450ms ease-out
+
+    @media(max-width: 1024px)
+        margin: $size-S $size-L
+
+    @media(max-width: 768px)
+        padding: $size-S / 2 $size-M / 2
+
+    @media (max-width: 425px)
+        margin: $size-S $size-M
+
+    &:hover
+        cursor: pointer
+
+.package
+    color: $black
+    background-color: $yellow
+
+    &:hover
+        border-color: $black
+
+.documentation
+    color: $white
+    background-color: $pink
+
+    &:hover
+        border-color: $white
+
+.footer
+    @include footer-text
+    color: $black
+    text-align: center
+    margin: 0 10vw $size-M
+    line-height: 150%

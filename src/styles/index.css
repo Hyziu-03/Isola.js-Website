@@ -43,7 +43,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 88px;
+	margin-bottom: 48px;
 }
 
 .heading {
@@ -52,13 +52,25 @@ html {
 	text-shadow: 8px 8px 0 rgba(42, 42, 42, 0.2509803922);
 	margin-top: 48px;
 }
+@media (max-width: 768px) {
+	.heading {
+		font-size: 64px;
+		line-height: 64px;
+	}
+}
 
 .subheader {
 	font-size: 32px;
 	line-height: 48px;
-	margin-top: 16px;
 	max-width: 600px;
 	text-align: center;
+	margin: 16px 16px 0 16px;
+}
+@media (max-width: 768px) {
+	.subheader {
+		font-size: 20px;
+		line-height: 32px;
+	}
 }
 
 .subheading {
@@ -66,18 +78,42 @@ html {
 	line-height: 64px;
 	text-align: center;
 	text-shadow: 8px 8px 0 rgba(42, 42, 42, 0.2509803922);
+	margin: 0 16px 0 16px;
+}
+@media (max-width: 768px) {
+	.subheading {
+		font-size: 40px;
+		line-height: 48px;
+	}
+}
+
+.modules {
+	margin-bottom: 88px;
+	background-color: #ff21ed;
+	padding: 48px;
+	border-radius: 22.5%;
 }
 
 .icons {
 	display: flex;
 	justify-content: space-evenly;
 	margin-top: 48px;
-	margin-bottom: 88px;
+}
+@media (max-width: 550px) {
+	.icons {
+		flex-direction: column;
+	}
 }
 
 .title {
 	font-size: 40px;
 	line-height: 40px;
+}
+@media (max-width: 768px) {
+	.title {
+		font-size: 32px;
+		line-height: 48px;
+	}
 }
 
 .icon {
@@ -85,6 +121,12 @@ html {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
+	margin: 0 16px 0 16px;
+}
+@media (max-width: 425px) {
+	.icon {
+		margin: 16px 0;
+	}
 }
 
 .vector {
@@ -94,9 +136,13 @@ html {
 .explanation {
 	display: flex;
 	align-items: center;
-	margin-top: 48px;
-	margin-bottom: 88px;
+	margin: 48px 0 48px 0;
 	justify-content: center;
+}
+@media (max-width: 1024px) {
+	.explanation {
+		flex-direction: column;
+	}
 }
 .explanation .text {
 	font-size: 32px;
@@ -105,12 +151,106 @@ html {
 	max-width: 600px;
 	margin: 0 48px;
 }
+@media (max-width: 768px) {
+	.explanation .text {
+		font-size: 20px;
+		line-height: 32px;
+	}
+}
+@media (max-width: 1024px) {
+	.explanation .text {
+		margin-top: 48px;
+	}
+}
 
 .photo {
-	min-width: 384px;
-	min-height: 384px;
-	background-image: url(../../public/szymon-hyziak.jpg);
+	min-width: 292px;
+	min-height: 292px;
+	background-image: url(../../szymon-hyziak.jpg);
 	background-size: cover;
 	background-position: center;
 	border-radius: 45%;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 48px;
+}
+@media (max-width: 1024px) {
+	.buttons {
+		flex-direction: column;
+	}
+}
+
+.package,
+.documentation {
+	font-size: 32px;
+	line-height: 48px;
+	box-shadow: 8px 8px 0 rgba(42, 42, 42, 0.2509803922);
+	padding: 16px 88px;
+	border-radius: 88px;
+	border: 4px solid transparent;
+	transition: all 450ms ease-out;
+}
+@media (max-width: 768px) {
+	.package,
+	.documentation {
+		font-size: 20px;
+		line-height: 32px;
+	}
+}
+@media (max-width: 1024px) {
+	.package,
+	.documentation {
+		margin: 16px 88px;
+	}
+}
+@media (max-width: 768px) {
+	.package,
+	.documentation {
+		padding: 8px 24px;
+	}
+}
+@media (max-width: 425px) {
+	.package,
+	.documentation {
+		margin: 16px 48px;
+	}
+}
+.package:hover,
+.documentation:hover {
+	cursor: pointer;
+}
+
+.package {
+	color: #2a2a2a;
+	background-color: #edff21;
+}
+.package:hover {
+	border-color: #2a2a2a;
+}
+
+.documentation {
+	color: #efefef;
+	background-color: #ff21ed;
+}
+.documentation:hover {
+	border-color: #efefef;
+}
+
+.footer {
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #2a2a2a;
+	text-align: center;
+	margin: 0 10vw 48px;
+	line-height: 150%;
+}
+@media (max-width: 768px) {
+	.footer {
+		font-size: 16px;
+		line-height: 24px;
+	}
 } /*# sourceMappingURL=index.css.map */

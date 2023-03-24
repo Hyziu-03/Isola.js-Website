@@ -6,9 +6,9 @@ export default function Modules(props) {
     const { subheading } = props;
 
     return (
-        <>
+        <article className="modules">
             <h2 className="subheading" tabIndex={0}>{subheading}</h2>
-            <article className="icons">
+            <section className="icons">
                 <section className="icon" tabIndex={0}>
                     <Navigator />
                     <span className="title">Navigator</span>
@@ -21,7 +21,7 @@ export default function Modules(props) {
                     <Jokes />
                     <span className="title">Jokes</span>
                 </section>
-            </article>
-        </>
+            </section>
+        </article>
     )
 }

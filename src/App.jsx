@@ -4,7 +4,7 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Modules from "./components/Modules"
 
-// place the wave background in the Modules component
+// Consider all edge cases 
 
 function App() {
   return (

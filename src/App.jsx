@@ -1,10 +1,22 @@
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import Author from "./components/Author"
 import Buttons from "./components/Buttons"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Modules from "./components/Modules"
 
-// Consider all edge cases 
+const firebaseConfig = {
+  apiKey: "AIzaSyC6bxlow1yHkHpMSvpbmXiu76EXFNzD8Kw",
+  authDomain: "isolajs.firebaseapp.com",
+  projectId: "isolajs",
+  storageBucket: "isolajs.appspot.com",
+  messagingSenderId: "585967781854",
+  appId: "1:585967781854:web:b3fdb9d192db0a21a43f4f",
+  measurementId: "G-4G9F4EG4BM"
+};
+
+const app = initializeApp(firebaseConfig);
 
 function App() {
   return (

@@ -32,11 +32,25 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 
 html {
 	font-family: "Poppins";
-	color: #2a2a2a;
+}
+@media (prefers-color-scheme: light) {
+	html {
+		color: #2a2a2a;
+		background-color: #efefef;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	html {
+		background-color: #2a2a2a;
+		color: #efefef;
+	}
 }
 
 .header {
@@ -49,7 +63,6 @@ html {
 .heading {
 	font-size: 96px;
 	line-height: 96px;
-	text-shadow: 8px 8px 0 rgba(42, 42, 42, 0.2509803922);
 	margin-top: 48px;
 }
 @media (max-width: 768px) {
@@ -58,13 +71,30 @@ html {
 		line-height: 64px;
 	}
 }
+@media (prefers-color-scheme: dark) {
+	.heading {
+		text-shadow: 8px 8px 0
+			rgba(239, 239, 239, 0.2509803922);
+	}
+}
+@media (prefers-color-scheme: light) {
+	.heading {
+		text-shadow: 8px 8px 0
+			rgba(42, 42, 42, 0.2509803922);
+	}
+}
+
+.link {
+	text-decoration: none;
+	color: inherit;
+}
 
 .subheader {
 	font-size: 32px;
 	line-height: 48px;
 	max-width: 600px;
 	text-align: center;
-	margin: 16px 16px 0 16px;
+	margin: 16px 48px 0 48px;
 }
 @media (max-width: 768px) {
 	.subheader {
@@ -77,13 +107,30 @@ html {
 	font-size: 64px;
 	line-height: 64px;
 	text-align: center;
-	text-shadow: 8px 8px 0 rgba(42, 42, 42, 0.2509803922);
 	margin: 0 16px 0 16px;
 }
 @media (max-width: 768px) {
 	.subheading {
 		font-size: 40px;
 		line-height: 48px;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	.subheading:nth-of-type(0) {
+		text-shadow: 8px 8px 0
+			rgba(239, 239, 239, 0.3764705882);
+	}
+}
+@media (prefers-color-scheme: dark) {
+	.subheading:nth-of-type(1) {
+		text-shadow: 8px 8px 0
+			rgba(239, 239, 239, 0.2509803922);
+	}
+}
+@media (prefers-color-scheme: light) {
+	.subheading {
+		text-shadow: 8px 8px 0
+			rgba(42, 42, 42, 0.2509803922);
 	}
 }
 
@@ -122,6 +169,11 @@ html {
 	align-items: center;
 	justify-content: space-around;
 	margin: 0 16px 0 16px;
+}
+@media (max-width: 550px) {
+	.icon {
+		margin: 16px 0;
+	}
 }
 @media (max-width: 425px) {
 	.icon {
@@ -166,7 +218,7 @@ html {
 .photo {
 	min-width: 292px;
 	min-height: 292px;
-	background-image: url(../../szymon-hyziak.jpg);
+	background-image: url(/szymon-hyziak.jpg);
 	background-size: cover;
 	background-position: center;
 	border-radius: 45%;
@@ -187,17 +239,31 @@ html {
 .documentation {
 	font-size: 32px;
 	line-height: 48px;
-	box-shadow: 8px 8px 0 rgba(42, 42, 42, 0.2509803922);
+	text-align: center;
 	padding: 16px 88px;
 	border-radius: 88px;
 	border: 4px solid transparent;
 	transition: all 450ms ease-out;
+	margin: 0 48px;
 }
 @media (max-width: 768px) {
 	.package,
 	.documentation {
 		font-size: 20px;
 		line-height: 32px;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	.package,
+	.documentation {
+		box-shadow: 8px 8px 0
+			rgba(239, 239, 239, 0.2509803922);
+	}
+}
+@media (prefers-color-scheme: light) {
+	.package,
+	.documentation {
+		box-shadow: 8px 8px 0 rgba(42, 42, 42, 0.2509803922);
 	}
 }
 @media (max-width: 1024px) {
@@ -243,7 +309,6 @@ html {
 	font-size: 24px;
 	line-height: 24px;
 	font-weight: 400;
-	color: #2a2a2a;
 	text-align: center;
 	margin: 0 10vw 48px;
 	line-height: 150%;
@@ -252,5 +317,15 @@ html {
 	.footer {
 		font-size: 16px;
 		line-height: 24px;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	.footer {
+		color: #efefef;
+	}
+}
+@media (prefers-color-scheme: light) {
+	.footer {
+		color: #2a2a2a;
 	}
 } /*# sourceMappingURL=index.css.map */

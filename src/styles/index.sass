@@ -1,13 +1,23 @@
+// optimized for screens >320px and <1600px   
+
 @import "module"
 
 *
     padding: 0
     margin: 0
     box-sizing: border-box
+    user-select: none
 
 html
     font-family: $font-family
-    color: $black
+
+    @media(prefers-color-scheme: light)
+        color: $black
+        background-color: $white
+
+    @media(prefers-color-scheme: dark)
+        background-color: $black
+        color: $white
 
 .header
     display: flex
@@ -17,20 +27,39 @@ html
 
 .heading
     @include heading
-    text-shadow: $shadow
     margin-top: $size-M
+
+    @media(prefers-color-scheme: dark)
+        text-shadow: $light-shadow
+
+    @media(prefers-color-scheme: light)
+        text-shadow: $dark-shadow
+
+.link
+    text-decoration: none
+    color: inherit
 
 .subheader
     @include standard-text
     max-width: 600px
     text-align: center
-    margin: $size-S $size-S 0 $size-S
+    margin: $size-S $size-M 0 $size-M
 
 .subheading
     @include subheading
     text-align: center
-    text-shadow: $shadow
     margin: 0 $size-S 0 $size-S
+
+    &:nth-of-type(0)
+        @media(prefers-color-scheme: dark)
+            text-shadow: $intense-light-shadow
+
+    &:nth-of-type(1)
+        @media(prefers-color-scheme: dark)
+            text-shadow: $light-shadow
+
+    @media(prefers-color-scheme: light)
+        text-shadow: $dark-shadow
 
 .modules
     margin-bottom: $size-L
@@ -55,6 +84,9 @@ html
     align-items: center
     justify-content: space-around
     margin: 0 $size-S 0 $size-S
+
+    @media(max-width: 550px)
+        margin: $size-S 0
 
     @media(max-width: 425px)
         margin: $size-S 0
@@ -83,7 +115,7 @@ html
 .photo
     min-width: $dimension
     min-height: $dimension
-    background-image: url(../../szymon-hyziak.jpg)
+    background-image: url(/szymon-hyziak.jpg)
     background-size: cover
     background-position: center
     border-radius: 45%
@@ -98,11 +130,18 @@ html
 
 .package, .documentation
     @include standard-text
-    box-shadow: $shadow
+    text-align: center
     padding: $size-S $size-L
     border-radius: $size-L
     border: 4px solid transparent
     transition: all 450ms ease-out
+    margin: 0 $size-M
+
+    @media(prefers-color-scheme: dark)
+        box-shadow: $light-shadow
+
+    @media(prefers-color-scheme: light)
+        box-shadow: $dark-shadow
 
     @media(max-width: 1024px)
         margin: $size-S $size-L
@@ -132,7 +171,12 @@ html
 
 .footer
     @include footer-text
-    color: $black
     text-align: center
     margin: 0 10vw $size-M
     line-height: 150%
+
+    @media(prefers-color-scheme: dark)
+        color: $white
+
+    @media(prefers-color-scheme: light)
+        color: $black

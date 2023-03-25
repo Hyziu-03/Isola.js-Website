@@ -3,8 +3,8 @@ export default function Buttons(props) {
 
   return (
     <article className="buttons">
-      <button className="package">{pkg}</button>
-      <button className="documentation">{documentation}</button>
+      <a href="https://www.npmjs.com/package/isola" target="_blank" rel="noopener noreferrer" className="package link">{pkg}</a>
+      <a href="https://github.com/Hyziu-03/Isola.js#readme" target="_blank" rel="noopener noreferrer" className=" documentation link">{documentation}</a>
     </article>
   )
 }

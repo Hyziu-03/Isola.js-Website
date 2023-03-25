@@ -3,7 +3,9 @@ export default function Header(props) {
 
     return (
         <header className="header">
-            <h1 className="heading" tabIndex={0}>{heading}</h1>
+            <a className="link" href="/">
+                <h1 className="heading" tabIndex={0}>{heading}</h1>
+            </a>
             <p className="subheader">{subheader}</p>
         </header>
     )

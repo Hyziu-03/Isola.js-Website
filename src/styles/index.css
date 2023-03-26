@@ -136,7 +136,7 @@ html {
 
 .modules {
 	margin-bottom: 88px;
-	background-color: #ff21ed;
+	background-color: #8f0083;
 	padding: 48px;
 	border-radius: 22.5%;
 }
@@ -218,7 +218,7 @@ html {
 .photo {
 	min-width: 292px;
 	min-height: 292px;
-	background-image: url(/szymon-hyziak.jpg);
+	background-image: url(/szymon-hyziak.webp);
 	background-size: cover;
 	background-position: center;
 	border-radius: 45%;
@@ -299,7 +299,7 @@ html {
 
 .documentation {
 	color: #efefef;
-	background-color: #ff21ed;
+	background-color: #8f0083;
 }
 .documentation:hover {
 	border-color: #efefef;

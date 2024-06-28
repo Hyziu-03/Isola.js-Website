@@ -1,5 +1,7 @@
 # Isola.js-Website
 
+> The library is no longer maintained
+
 A web development oriented multi purpose JavaScript library. Created by Szymon Hyziak. Read up on it here: <https://isolajs.web.app>
 
 ## Read docs online
